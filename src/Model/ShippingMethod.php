@@ -49,7 +49,7 @@ class ShippingMethod extends DataObject
     public function getTitle()
     {
         $rate = number_format(
-            $this->Rate,
+            $this->Rate ?? 0,
             2,
             ShopCurrency::config()->decimal_delimiter,
             ShopCurrency::config()->thousand_delimiter
